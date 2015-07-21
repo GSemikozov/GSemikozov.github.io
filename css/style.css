@@ -207,7 +207,8 @@ body {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        font-size: 16px; }
   .wrapper footer {
     width: 100%;
     background: #7f7f00;
