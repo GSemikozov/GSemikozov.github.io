@@ -4,6 +4,10 @@
   src: url("../fonts/helvetica-light-light.eot") format("embedded-opentype"), url("../fonts/helvetica-light-light.woff") format("woff"), url("../fonts/helvetica-light-light.ttf") format("truetype"), url("../fonts/helvetica-light-light.svg#HelveticaLightLight") format("svg");
   src: url("../fonts/helvetica-light-light.eot"); }
 
+@font-face {
+  font-family: 'Amadeus';
+  src: url("../fonts/Amadeus.ttf") format("truetype"); }
+
 a {
   outline: none; }
   a:hover {
@@ -47,29 +51,60 @@ body {
     border-radius: 0;
     border: none;
     border-bottom: 1px solid #afb1b4; }
-    .wrapper .navbar_custom .navbar-header .navbar-toggle {
-      background: #fff; }
-      .wrapper .navbar_custom .navbar-header .navbar-toggle .icon-bar {
-        background: #000; }
-    .wrapper .navbar_custom .navbar-header .navbar-brand {
-      display: block;
-      font-size: 30px;
-      line-height: 30px;
-      padding: 25px;
-      color: #fff; }
-    .wrapper .navbar_custom .navbar-header:hover {
-      text-decoration: none;
-      cursor: pointer; }
-    .wrapper .navbar_custom .nav-menu li a {
-      display: block;
-      padding: 30px;
-      font-size: 18px;
-      font-family: "Raleway", sans-serif;
-      color: #fff;
-      transition: .3s all; }
-      .wrapper .navbar_custom .nav-menu li a:hover, .wrapper .navbar_custom .nav-menu li a:focus {
+    .wrapper .navbar_custom .navbar-header {
+      position: relative; }
+      .wrapper .navbar_custom .navbar-header .navbar-toggle {
+        background: #fff; }
+        .wrapper .navbar_custom .navbar-header .navbar-toggle .icon-bar {
+          background: #000; }
+      .wrapper .navbar_custom .navbar-header .navbar-brand {
+        display: block;
+        font-size: 80px;
+        font-family: 'Amadeus';
+        line-height: 30px;
+        padding: 25px;
+        color: #fff; }
+      .wrapper .navbar_custom .navbar-header:hover {
+        text-decoration: none;
+        cursor: pointer; }
+    .wrapper .navbar_custom .nav-menu {
+      width: 80%;
+      text-align: center; }
+      .wrapper .navbar_custom .nav-menu li {
+        float: none;
+        display: inline-block; }
+        .wrapper .navbar_custom .nav-menu li a {
+          display: block;
+          padding: 30px 20px;
+          font-size: 18px;
+          font-family: "Raleway", sans-serif;
+          color: #fff;
+          transition: .3s all; }
+          .wrapper .navbar_custom .nav-menu li a:hover, .wrapper .navbar_custom .nav-menu li a:focus {
+            color: #929191; }
+    .wrapper .navbar_custom .contacts-menu {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 18px; }
+      .wrapper .navbar_custom .contacts-menu li {
+        border: 2px solid #fff;
+        margin-right: 15px;
         background: #fff;
-        color: #929191; }
+        border-radius: 50%; }
+        .wrapper .navbar_custom .contacts-menu li a {
+          text-align: center;
+          vertical-align: middle;
+          font-size: 28px;
+          padding: 6px;
+          color: #fff;
+          background: #0142b6;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px; }
+        .wrapper .navbar_custom .contacts-menu li .envelope {
+          font-size: 22px;
+          padding: 9px; }
   .wrapper .content {
     margin-top: 80px; }
     .wrapper .content .block_wallpaper {
@@ -161,39 +196,6 @@ body {
         left: 0;
         width: 100%;
         height: 100%; }
-        .wrapper .content .block_contacts .contacts-wrap .contact-menu {
-          list-style: none; }
-          .wrapper .content .block_contacts .contacts-wrap .contact-menu li {
-            margin-bottom: 30px; }
-            .wrapper .content .block_contacts .contacts-wrap .contact-menu li a {
-              position: relative; }
-              .wrapper .content .block_contacts .contacts-wrap .contact-menu li a span {
-                font-size: 80px;
-                color: #00d089;
-                transition: 1s; }
-                .wrapper .content .block_contacts .contacts-wrap .contact-menu li a span:hover {
-                  color: #7f7f00; }
-              .wrapper .content .block_contacts .contacts-wrap .contact-menu li a.github:hover:after {
-                position: relative;
-                bottom: -25px;
-                left: -110px;
-                font-size: 16px;
-                color: #7f7f00;
-                content: "view sources on github"; }
-              .wrapper .content .block_contacts .contacts-wrap .contact-menu li a.skype:hover:after {
-                position: relative;
-                bottom: -25px;
-                left: -80px;
-                font-size: 16px;
-                color: #7f7f00;
-                content: "add my contact"; }
-              .wrapper .content .block_contacts .contacts-wrap .contact-menu li a.envelope:hover:after {
-                position: relative;
-                bottom: -25px;
-                left: -120px;
-                font-size: 16px;
-                color: #7f7f00;
-                content: "write me your message"; }
   .wrapper footer {
     width: 100%;
     background: #7f7f00;
@@ -204,27 +206,45 @@ body {
       text-align: center; }
 
 @media (max-width: 992px) {
-  .wrapper .navbar_custom .navbar-header .navbar-brand {
-    display: block;
-    font-size: 20px;
-    line-height: 30px;
-    padding: 25px;
-    color: #fff; }
   .wrapper .navbar_custom .nav-menu li a {
     padding: 30px 10px; } }
 
+@media (min-width: 768px) and (max-width: 910px) {
+  .wrapper .navbar_custom .contacts-menu {
+    display: none; } }
+
 @media (max-width: 767px) {
+  .wrapper .navbar_custom .navbar-header .navbar-toggle {
+    z-index: 1000;
+    margin-right: 25px; }
   .wrapper .navbar_custom .navbar-header .navbar-brand {
-    padding: 15px;
+    font-size: 60px;
+    padding: 20px;
     line-height: 20px; }
   .wrapper .navbar_custom .nav-menu {
-    margin: 0; }
+    margin: 0;
+    width: 100%;
+    position: relative; }
     .wrapper .navbar_custom .nav-menu li {
+      display: block;
       border-bottom: 1px solid #afb1b4; }
       .wrapper .navbar_custom .nav-menu li a {
         padding: 10px; }
       .wrapper .navbar_custom .nav-menu li:last-child {
         border-bottom: none; }
+  .wrapper .navbar_custom .contacts-menu {
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    text-align: center; }
+    .wrapper .navbar_custom .contacts-menu li {
+      display: inline-block; }
+      .wrapper .navbar_custom .contacts-menu li a {
+        padding: 3px;
+        width: 34px;
+        height: 34px; }
+      .wrapper .navbar_custom .contacts-menu li .envelope {
+        padding: 5px; }
   .wrapper .content .block_about .block_about__header {
     margin: 20px 0;
     padding: 10px 0;
@@ -235,5 +255,7 @@ body {
     padding: 30px 0; } }
 
 @media (max-width: 400px) {
-  .wrapper .content .block_about .block_about__header {
-    text-align: left; } }
+  .wrapper .content {
+    margin-top: 50px; }
+    .wrapper .content .block_about .block_about__header {
+      text-align: left; } }
