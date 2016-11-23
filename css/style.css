@@ -79,6 +79,7 @@ body {
           font-size: 18px;
           font-family: "Raleway", sans-serif;
           color: #fff;
+          -webkit-transition: .3s all;
           transition: .3s all; }
           .wrapper .navbar_custom .nav-menu li a:hover, .wrapper .navbar_custom .nav-menu li a:focus {
             color: #929191; }
@@ -102,6 +103,7 @@ body {
           border-radius: 50%;
           width: 40px;
           height: 40px;
+          -webkit-transition: .3s all;
           transition: .3s all; }
           .wrapper .navbar_custom .contacts-menu li a:hover, .wrapper .navbar_custom .contacts-menu li a:focus {
             opacity: .7; }
@@ -159,6 +161,7 @@ body {
         line-height: 2.5em;
         text-align: center;
         text-transform: uppercase;
+        -webkit-transition: 1s;
         transition: 1s; }
         .wrapper .content .block_about .promo-btn a:hover {
           background: #fff;
@@ -192,6 +195,7 @@ body {
         font-size: 18px;
         font-weight: bold;
         color: #0142b6;
+        -webkit-transition: 1s;
         transition: 1s; }
         .wrapper .content .block_education .block_education__content .vanilla:hover, .wrapper .content .block_education .block_education__content .vanilla2:hover {
           color: #269abc; }
@@ -278,3 +282,18 @@ body {
     margin-top: 50px; }
     .wrapper .content .block_about .block_about__header {
       text-align: left; } }
+
+.scrollToTop {
+  display: none;
+  width: 60px;
+  height: 75px;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 700;
+  color: #444;
+  text-decoration: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: url(http://dce5jani6jm7e.cloudfront.net/images/page/se/miscs-icon-top.svg) 0 20px no-repeat;
+  z-index: 10000; }
